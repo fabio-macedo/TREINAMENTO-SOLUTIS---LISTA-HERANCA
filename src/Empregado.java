@@ -42,6 +42,6 @@ public class Empregado extends Pessoa{
 
     public void calcularSalario(){
         double result = vencimentoBase - vencimentoBase * imposto;
-        System.out.println("Salário final: " + result);
+        System.out.println("Salário final do Empregado: " + result);
     }
 }

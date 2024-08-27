@@ -5,7 +5,7 @@ public class Operario extends Empregado{
     public Operario(String nome, String endereco, String telefone, int codigoSetor, double vencimentoBase, double imposto, double valorProducao, double comissao) {
         super(nome, endereco, telefone, codigoSetor, vencimentoBase, imposto);
         this.valorProducao = valorProducao;
-        this.comissao = comissao * getVencimentoBase();
+        this.comissao = comissao;
     }
 
     public Operario(int codigoSetor, double vencimentoBase, double imposto, double valorProducao, double comissao) {
@@ -32,7 +32,8 @@ public class Operario extends Empregado{
 
     @Override
     public void calcularSalario() {
-        double result = (getVencimentoBase() * comissao) + getVencimentoBase();
+        double result = (getVencimentoBase() - (getVencimentoBase()*getImposto()) + (valorProducao * comissao));
+
         System.out.println("Salário final do operário = " + result);
     }
 }

@@ -13,7 +13,7 @@ public class Administrador extends Empregado{
 
     @Override
     public void calcularSalario() {
-        double result = (getVencimentoBase() + ajudaDeCusto);
+        double result = ((getVencimentoBase() + ajudaDeCusto) - getVencimentoBase()*getImposto());
         System.out.println("Salário final Administrador = " + result);
     }
 }

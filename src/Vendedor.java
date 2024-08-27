@@ -32,7 +32,7 @@ public class Vendedor extends Empregado{
 
     @Override
     public void calcularSalario() {
-        double result = getValorVenda() * this.comissao;
-        System.out.println("Salario vendedor: " + (result + getVencimentoBase()));
+        double result = (getVencimentoBase() - (getVencimentoBase()*getImposto()) + (valorVenda * comissao));
+        System.out.println("Salario final do vendedor: " + result);
     }
 }

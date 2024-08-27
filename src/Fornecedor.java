@@ -30,6 +30,6 @@ public class Fornecedor extends Pessoa{
     }
 
     public void obterSaldo(){
-        System.out.println("Saldo atual: " + (this.valorCredito - this.valorDivida));
+        System.out.println("Saldo atual fornecedor: " + (this.valorCredito - this.valorDivida));
     }
 }
